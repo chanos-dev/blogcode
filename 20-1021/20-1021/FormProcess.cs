@@ -25,5 +25,13 @@ namespace _20_1021
 
             Process.Start(textBox_Process.Text);
         }
+
+        private void button_args_Click(object sender, EventArgs e)
+        {
+            if ((string.IsNullOrEmpty(textBox_args.Text)) || (string.IsNullOrEmpty(textBox_args1.Text)))
+                return;
+
+            Process.Start(textBox_args.Text, textBox_args1.Text);                        
+        }
     }
 }

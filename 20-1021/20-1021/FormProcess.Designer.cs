@@ -30,6 +30,9 @@
         {
             this.button_Process = new System.Windows.Forms.Button();
             this.textBox_Process = new System.Windows.Forms.TextBox();
+            this.textBox_args = new System.Windows.Forms.TextBox();
+            this.button_args = new System.Windows.Forms.Button();
+            this.textBox_args1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_Process
@@ -38,7 +41,7 @@
             this.button_Process.Name = "button_Process";
             this.button_Process.Size = new System.Drawing.Size(234, 34);
             this.button_Process.TabIndex = 0;
-            this.button_Process.Text = "클릭";
+            this.button_Process.Text = "실행";
             this.button_Process.UseVisualStyleBackColor = true;
             this.button_Process.Click += new System.EventHandler(this.button_Process_Click);
             // 
@@ -49,11 +52,38 @@
             this.textBox_Process.Size = new System.Drawing.Size(234, 21);
             this.textBox_Process.TabIndex = 1;
             // 
+            // textBox_args
+            // 
+            this.textBox_args.Location = new System.Drawing.Point(13, 129);
+            this.textBox_args.Name = "textBox_args";
+            this.textBox_args.Size = new System.Drawing.Size(234, 21);
+            this.textBox_args.TabIndex = 3;
+            // 
+            // button_args
+            // 
+            this.button_args.Location = new System.Drawing.Point(13, 183);
+            this.button_args.Name = "button_args";
+            this.button_args.Size = new System.Drawing.Size(234, 34);
+            this.button_args.TabIndex = 2;
+            this.button_args.Text = "아규먼트 실행";
+            this.button_args.UseVisualStyleBackColor = true;
+            this.button_args.Click += new System.EventHandler(this.button_args_Click);
+            // 
+            // textBox_args1
+            // 
+            this.textBox_args1.Location = new System.Drawing.Point(13, 156);
+            this.textBox_args1.Name = "textBox_args1";
+            this.textBox_args1.Size = new System.Drawing.Size(234, 21);
+            this.textBox_args1.TabIndex = 4;
+            // 
             // FormProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 106);
+            this.ClientSize = new System.Drawing.Size(261, 242);
+            this.Controls.Add(this.textBox_args1);
+            this.Controls.Add(this.textBox_args);
+            this.Controls.Add(this.button_args);
             this.Controls.Add(this.textBox_Process);
             this.Controls.Add(this.button_Process);
             this.Name = "FormProcess";
@@ -68,6 +98,9 @@
 
         private System.Windows.Forms.Button button_Process;
         private System.Windows.Forms.TextBox textBox_Process;
+        private System.Windows.Forms.TextBox textBox_args;
+        private System.Windows.Forms.Button button_args;
+        private System.Windows.Forms.TextBox textBox_args1;
     }
 }
 
