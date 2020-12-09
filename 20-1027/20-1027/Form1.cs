@@ -116,7 +116,7 @@ namespace _20_1027
     }
 
     class Fruit
-    {
+    { 
         public Fruit(string name, int kcal, int price)
         {
             Name = name;
@@ -124,6 +124,7 @@ namespace _20_1027
             Price = price;
         }
 
+        
         public string Name;
         public int Kcal;
         public int Price;
