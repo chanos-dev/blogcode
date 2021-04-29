@@ -14,8 +14,8 @@ namespace _21_0428.Utils
         int[] chrint = { 44032, 44620, 45208, 45796, 46384, 46972, 47560, 48148, 48736, 49324, 49912, 50500, 51088, 51676, 52264, 52852, 53440, 54028, 54616, 55204 }; 
 
         public List<string> SearchWord(List<string> contents, string word, out string searchPattern)
-        { 
-            string pattern = "";
+        {
+            var pattern = new StringBuilder(); 
 
             for (int i = 0; i < word.Length; i++)
             { 
@@ -24,8 +24,8 @@ namespace _21_0428.Utils
                     for (int j = 0; j < chr.Length; j++)
                     {
                         if (word[i] == chr[j])
-                        {
-                            pattern += string.Format("[{0}-{1}]", str[j], (char)(chrint[j + 1] - 1));
+                        { 
+                            pattern.Append($"[{str[j]}-{(char)(chrint[j + 1] - 1)}]");
                         }
                     }
                 } 
@@ -35,22 +35,22 @@ namespace _21_0428.Utils
 
                     magic = 27 - (magic % 28);
 
-                    pattern += $"[{word[i]}-{(char)(word[i] + magic)}]"; 
+                    pattern.Append($"[{word[i]}-{(char)(word[i] + magic)}]"); 
                 }  
                 else if (word[i] >= 'A' && word[i] <= 'z')
                 { 
-                    bool isLower = word[i] >= 'a' ? true : false; 
+                    bool isLower = word[i] >= 'a' ? true : false;
 
-                    pattern += $"[{word[i]}{(char)(isLower ? word[i] - 32 : word[i] + 32)}]";
+                    pattern.Append($"[{word[i]}{(char)(isLower ? word[i] - 32 : word[i] + 32)}]");
                 } 
                 else if (word[i] >= '0' && word[i] <= '9')
                 {
-                    pattern += word[i];
+                    pattern.Append(word[i]);
                 }
             }
 
-            searchPattern = pattern;
-            return contents.Where(e => Regex.IsMatch(e.ToString(), pattern)).ToList();
+            searchPattern = pattern.ToString();
+            return contents.Where(e => Regex.IsMatch(e.ToString(), pattern.ToString())).ToList();
         }
     }
 }
