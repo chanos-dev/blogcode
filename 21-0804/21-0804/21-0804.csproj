@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E53FD2CB-5A38-482F-921A-68C241BA9135}</ProjectGuid>
+    <ProjectGuid>{BDA687D5-6E01-4CA3-8699-982733FC7EFE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_20_0802</RootNamespace>
-    <AssemblyName>20-0802</AssemblyName>
+    <RootNamespace>_21_0804</RootNamespace>
+    <AssemblyName>21-0804</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
