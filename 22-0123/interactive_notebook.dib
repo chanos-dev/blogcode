@@ -1,0 +1,28 @@
+#!markdown
+
+👇👇 <b>`.NET Interactive Notebooks`</b> Test!! 
+
+#!csharp
+
+Console.WriteLine("Hello, World!!")
+
+#!csharp
+
+foreach(var i in Enumerable.Range(1, 10))
+{
+    Console.WriteLine(i);
+}
+
+#!csharp
+
+public class Foo
+{
+    public int Age;
+}
+
+var f = new Foo()
+{
+    Age = 10,
+};
+
+Console.WriteLine($"Age : {f.Age}")
