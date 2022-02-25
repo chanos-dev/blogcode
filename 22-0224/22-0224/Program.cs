@@ -33,6 +33,8 @@ namespace _22_0224
                     [ETag.CreateDate] = DateTime.Now.ToString("yyyyMMdd:HHmmss"),
                 });
 
+                img.RemovePropertyItem((int)ETag.Software);
+
                 img.Save(temp);
             }
 
